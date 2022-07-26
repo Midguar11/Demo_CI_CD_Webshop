@@ -39,8 +39,12 @@ node {
     sh 'sudo docker-compose up -d'
   }
   
-  stage('Workflow Completed try webshop'){
+  stage('Workflow Completed try the webshop'){
     echo 'http://demoapp1.devopsempire.com/'
   }
+
+   stage("Finished Build Send email to Admin"){
+        emailext attachLog: true, body: 'Update  has been finished', subject: 'DemoApp1_Webshop_Build Complet', to: 'szendiattila11@gmail.com'
+    }
   
 }
