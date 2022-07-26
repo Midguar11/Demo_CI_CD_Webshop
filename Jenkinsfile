@@ -39,7 +39,7 @@ node {
     sh 'sudo docker-compose up -d'
   }
   
-  stage('Workflow Completed try the webshop'){
+  stage('The build is ready, try the webshop'){
     echo 'http://demoapp1.devopsempire.com/'
   }
 
