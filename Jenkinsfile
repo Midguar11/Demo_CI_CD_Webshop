@@ -22,7 +22,7 @@ node {
   stage('Docker Compose'){
     sh 'sudo docker-compose build'
     sh 'docker --version'
-    sh 'sudo docker tag test_app_web:latest midguar/test_app_web:latest'
+    sh 'sudo docker tag demo_webshop_web:latest midguar/demo_webshop_web:latest'
   }
   
   stage("Docker Hub Login"){
