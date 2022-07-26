@@ -46,5 +46,9 @@ node {
    stage("Finished Build Send email to Admin"){
         emailext attachLog: true, body: 'DemoApp1 Webshop Build Completed', subject: 'DemoApp1_Webshop_pipeline', to: 'szendiattila11@gmail.com'
     }
+
+   stage('The countdown has started. The Demo Webshop will be deleted after 15 minutes'){
+    echo 'http://demoapp1.devopsempire.com/'
+  }
   
 }
