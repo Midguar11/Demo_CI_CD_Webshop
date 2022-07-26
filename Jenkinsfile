@@ -32,7 +32,7 @@ node {
   }
   
   stage('Docker Hub Push'){
-    sh 'docker push midguar/test_app_web:latest'
+    sh 'docker push midguar/demo_webshop_web:latest'
   }
   
   stage('Run App Docker Build'){
