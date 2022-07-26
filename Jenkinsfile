@@ -13,7 +13,7 @@ node {
     }
   }
  
-  stage("Quality Gate"){
+  stage("Quality Gate / Passed"){
     timeout(time: 2, unit: 'MINUTES') { // Just in case something goes wrong, pipeline will be killed after a timeout
     waitForQualityGate abortPipeline: true    
     }
@@ -44,7 +44,7 @@ node {
   }
 
    stage("Finished Build Send email to Admin"){
-        emailext attachLog: true, body: 'Update  has been finished', subject: 'DemoApp1_Webshop_Build Complet', to: 'szendiattila11@gmail.com'
+        emailext attachLog: true, body: 'DemoApp1 Webshop Build Completed', subject: 'DemoApp1_Webshop_pipeline', to: 'szendiattila11@gmail.com'
     }
   
 }
