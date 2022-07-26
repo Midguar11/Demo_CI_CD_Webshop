@@ -14,7 +14,7 @@ node {
   }
  
   stage("Quality Gate / Passed"){
-    timeout(time: 2, unit: 'MINUTES') { // Just in case something goes wrong, pipeline will be killed after a timeout
+    timeout(time: 10, unit: 'MINUTES') { // Just in case something goes wrong, pipeline will be killed after a timeout
     waitForQualityGate abortPipeline: true    
     }
   }
