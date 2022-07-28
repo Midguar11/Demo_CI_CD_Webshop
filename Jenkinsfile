@@ -7,7 +7,7 @@ node {
   stage('Sonarqube Scan') {
     def scannerHome = tool 'SonarQube 4.7';
     withSonarQubeEnv('sonarqube') {
-      sh "${scannerHome}/bin/sonar-scanner \
+      sh "${tool("SonarQube 4.7")}/bin/sonar-scanner \
       -D sonar.projectKey=Demo_Webshop \
       "
     }
